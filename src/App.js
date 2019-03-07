@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -8,22 +7,41 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <div id="likes" className="Front-logo" alt="logo"></div>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Note-Boy FTW!!!
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <button onclick="window.location.href='/LoginScreen.html'">Enter</button>
         </header>
       </div>
     );
   }
 }
+
+function field_focus(field, email)
+{
+  if(field.value == email)
+  {
+    field.value = '';
+  }
+}
+
+function field_blur(field, email)
+{
+  if(field.value == '')
+  {
+    field.value = email;
+  }
+}
+
+// //Fade in dashboard box
+// $(document).ready(function(){
+//   $('.box').hide().fadeIn(1000);
+//   });
+
+// //Stop click event
+// $('a').click(function(event){
+//   event.preventDefault(); 
+// });
 
 export default App;
